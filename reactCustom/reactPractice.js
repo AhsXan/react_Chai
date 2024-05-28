@@ -1,27 +1,30 @@
-import { createElement, createRef } from "react";
 
 function customRender(reactElement, mainRoot) {
-  //    const domEL=document.createElement(reactElement.type)//"a" we can give direct
-  //     domEL.innerHTML= reactElement.children
+     const domEL=document.createElement(reactElement.type)//"a" we can give direct
+      domEL.innerHTML= reactElement.children
 
-  //     domEL.setAttribute("href",reactElement.props.href)
-  //     domEL.setAttribute("target",reactElement.props.target)
-  //     mainRoot.appendChild(domEL)
+      domEL.setAttribute("href",reactElement.props.href)
+      domEL.setAttribute("target",reactElement.props.target)
+      mainRoot.appendChild(domEL)
 
-  const domEl = createElement(reactElement.type);
-  domEl.innerHTML(reactElement.children);
-  for (let prop in reactElement.pros) {
-    if (prop === "children") continue;
-    domEl.setAttribute(prop, reactElement.props[prop]);
-  }
-  mainRoot.appendChild(domEl);
+  // const domEL = document.createElement(reactElement.type)
+  // domEL.innerHTML = reactElement.children;
+  // for (const x in reactElement.props) {
+  //   if (x  == "children") continue;
+  //   else{
+  //   domEL.setAttribute(x, reactElement.props[x])
+  //   }
+  // }
+  // mainRoot.appendChild(domEL)
 }
 // function customRender(reactElement,mainRoot){
 // const domElement = document.createElement(reactElement.type)
 // domElement.innerHTML= reactElement.children
-// domElement.setAttribu te("href", reactElement.props.href)
+// domElement.setAttribute("href", reactElement.props.href)
 // domElement.setAttribute("target", reactElement.props.target)
 // mainRoot.appendChild(domElement)
+// }
+
 // }
 const reactElement = {
   type: "a",
@@ -29,7 +32,7 @@ const reactElement = {
     href: "https://google.com",
     target: "_blank",
   },
-  children: "Click ok",
+  children: "Click HEREEEEEEEEEEEEEEEe",
 };
 const mainRoot = document.querySelector("#root");
 customRender(reactElement, mainRoot);
