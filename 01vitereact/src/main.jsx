@@ -6,7 +6,7 @@ import Ahsan from './ahsan.jsx'
 
 
 
-b
+
 
 // const Element2=(
 // <a href="https://coolors.co/palettes/trending">Color</a>
@@ -18,5 +18,34 @@ b
 // )
 // {/* <h1>Name</h1>
 //     <Ahsan/>
-//   <h6>OK</h6> */}
-  
+//   <h6>OK</h6> */}\
+
+const name="ahsan"
+const newElement=React.createElement( 
+    'h1',
+    {
+    
+    },
+          `THis is   ${name} `
+    )
+    const newElement2=React.createElement(
+    "a",
+    {
+      href: "https://giphy.com/",target :"_blank"
+    },
+    " GIF"
+    
+    )
+     
+    // ReactDOM.createRoot(document.querySelector("#root")).render(
+    //   newElement2
+    // )
+    ReactDOM.createRoot(document.querySelector("#root")).render(
+     
+      <>
+        {newElement}  
+         <Ahsan/>  
+         
+         {newElement2}
+      </>
+ )
